@@ -14,6 +14,10 @@ QA_PRESTRIPPED="opt/Upscayl/.*"
 
 IUSE="custom-models"
 
+PATCHES=(
+	"${FILESDIR}/upscayl-9999-export.patch"
+)
+
 pkg_pretend() {
     if use custom-models; then
         ewarn "WARNING: Custom-models are ~300MB in size. This will be fetched and included in the installation."
